@@ -12,7 +12,7 @@ pub struct BrotliDecoder {
 }
 
 impl BrotliDecoder {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             state: Box::new(BrotliState::new(
                 StandardAlloc::default(),
