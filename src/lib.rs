@@ -130,12 +130,7 @@
 //!
 
 #![cfg_attr(docsrs, feature(doc_auto_cfg, doc_cfg))]
-#![warn(
-    missing_docs,
-    rust_2018_idioms,
-    missing_copy_implementations,
-    missing_debug_implementations
-)]
+#![warn(rust_2018_idioms)]
 #![cfg_attr(not(all), allow(unused))]
 
 #[cfg(any(feature = "bzip2", feature = "flate2", feature = "xz2"))]
@@ -143,7 +138,7 @@ use std::convert::TryInto;
 
 #[macro_use]
 mod macros;
-mod codec;
+pub mod codec;
 
 #[cfg(feature = "futures-io")]
 pub mod futures;
@@ -151,7 +146,7 @@ pub mod futures;
 pub mod tokio;
 
 mod unshared;
-mod util;
+pub mod util;
 
 #[cfg(feature = "brotli")]
 pub mod brotli;
