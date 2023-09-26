@@ -9,7 +9,7 @@ pub struct DeflateEncoder {
 }
 
 impl DeflateEncoder {
-    pub(crate) fn new(level: Compression) -> Self {
+    pub fn new(level: Compression) -> Self {
         Self {
             inner: crate::codec::FlateEncoder::new(level, false),
         }

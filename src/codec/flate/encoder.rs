@@ -10,7 +10,7 @@ pub struct FlateEncoder {
 }
 
 impl FlateEncoder {
-    pub(crate) fn new(level: Compression, zlib_header: bool) -> Self {
+    pub fn new(level: Compression, zlib_header: bool) -> Self {
         Self {
             compress: Compress::new(level, zlib_header),
             flushed: true,

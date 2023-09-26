@@ -9,7 +9,7 @@ pub struct ZstdEncoder {
 }
 
 impl ZstdEncoder {
-    pub(crate) fn new(level: i32) -> Self {
+    pub fn new(level: i32) -> Self {
         Self {
             encoder: Unshared::new(Encoder::new(level).unwrap()),
         }

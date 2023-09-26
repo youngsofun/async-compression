@@ -40,7 +40,7 @@ impl BzEncoder {
     ///
     /// Allowable values range from 0 to 250 inclusive. 0 is a special case,
     /// equivalent to using the default value of 30.
-    pub(crate) fn new(level: Compression, work_factor: u32) -> Self {
+    pub fn new(level: Compression, work_factor: u32) -> Self {
         Self {
             compress: Compress::new(level, work_factor),
         }

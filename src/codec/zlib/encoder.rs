@@ -9,7 +9,7 @@ pub struct ZlibEncoder {
 }
 
 impl ZlibEncoder {
-    pub(crate) fn new(level: Compression) -> Self {
+    pub fn new(level: Compression) -> Self {
         Self {
             inner: crate::codec::FlateEncoder::new(level, true),
         }

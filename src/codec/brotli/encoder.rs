@@ -18,7 +18,7 @@ pub struct BrotliEncoder {
 }
 
 impl BrotliEncoder {
-    pub(crate) fn new(params: BrotliEncoderParams) -> Self {
+    pub fn new(params: BrotliEncoderParams) -> Self {
         let mut state = BrotliEncoderCreateInstance(StandardAlloc::default());
         state.params = params;
         Self { state }
