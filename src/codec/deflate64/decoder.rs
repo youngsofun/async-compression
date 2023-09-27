@@ -9,7 +9,7 @@ pub struct Deflate64Decoder {
 }
 
 impl Deflate64Decoder {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             inflater: Box::new(InflaterManaged::new()),
         }
